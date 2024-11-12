@@ -1,0 +1,105 @@
+// components/Login/login.module.scss
+.loginContainer {
+  padding: 30px 20px;
+  background: #fff;
+  color: #000;
+  max-width: 350px;
+  margin: 80px auto;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  background: #ff5858;
+  border-radius: 10px;
+  height: auto;
+  width: 90%;
+  margin-top: -50px;
+  box-shadow: 5px 5px 10px #c7c4c4;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.socialButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px; 
+}
+
+.socialButton {
+  background-color: #fff;
+  color: #ff5858;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.socialButton:hover {
+  transform: scale(1.1);
+  background-color: #ffe6e6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputField {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #000;
+}
+
+.rememberMeContainer {
+  color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+}
+
+.checkbox {
+  margin-right: 5px;
+}
+
+.submitButton {
+  background-color: #ff5858;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #e14b4b;
+}
+
+.signUpText {
+  color: grey;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signUpLink {
+  color: #ff5858;
+  text-decoration: none;
+}

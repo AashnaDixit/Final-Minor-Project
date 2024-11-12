@@ -1,0 +1,85 @@
+.slidingImages {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    position: relative;
+    margin-top: 200px;
+    background-color: white;
+    z-index: 1;
+
+    .slider {
+        display: flex;
+        position: relative;
+        gap: 3vw;
+        width: 100vw;
+        left: 12vw;
+
+        .project {
+            width: 25%;
+            height: 20vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative; // Add relative position for absolute positioning of description
+            transition: transform 0.3s ease;
+
+            .imageContainer {
+                font-family: auto;
+                box-shadow: 10px 10px 5px #757d85;
+                box-sizing: content-box;
+                background: linear-gradient(#B8BCBC, #1F3238, #B8BCBC);
+                border: 2px solid linear-gradient(#B8BCBC, #1F3238, #B8BCBC);;
+                position: relative;
+                width: 80%;
+                height: 80%;
+
+                // Title styles
+                .title {
+                    width: 180px;
+                    position: absolute;
+                    top: 10px; // Adjust based on preference
+                    left: 15%;
+                    transform: translateX(-50%); // Center the title horizontally
+                    color: black; // Text color
+                    font-size: 24px; // Font size
+                    font-weight: bold; // Font weight
+                    text-align: center; // Center the text
+                    opacity: 0; // Start hidden
+                }
+
+                // Static description styles
+                .description {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80%;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 16px;
+                    font-family: auto;
+                    font-weight: 400;
+                    text-align: left;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .circleContainer {
+        background-color: red;
+        position: relative;
+        margin-top: 100px;
+        .circle {
+            height: 1550%;
+            width: 120%;
+            left: -10%;
+            border-radius: 0 0 50% 50%;
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+        }
+    }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Threat Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">DASHBOARD</div>
+            <div class="search-box">
+                <img src="searchbar.jfif" alt="Search Icon">
+                <input type="text" placeholder="Search for...">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><img src="dashboard.svg" alt="Dashboard"> Dashboard</a></li>
+                    <li><a href="notifications.html"><img src="notifications.svg" alt="Notifications Icon"> Notifications</a></li>
+                    <li><a href="profile.html"><img src="user.svg" alt="Users Icon"> Profile</a></li>
+                    <!-- <li><a href="threatscore.html"><img src="user.svg" alt="Users Icon"> Threatscore</a></li> -->
+                </ul>
+            </nav>
+            <hr class="divider">
+            <nav class="bottom-links">
+                <ul>
+                    <!-- <li><img src="settings.svg" alt="Settings">Settings</li> -->
+                </ul>
+            </nav>
+            <a href="https://cybercrime.gov.in/" class="file-report-btn">File a Report</a>
+            <div class="profile">
+                <!-- <img src="profile_picture.jpg" alt="Profile Picture" class="small-profile">
+                <div>Account</div> -->
+            </div>
+            
+        </aside>
+        
+        <main class="main-content">
+            <header class="nav-bar">
+                <div class="dashboard-title">Dashboard</div>
+                <div class="user-info">
+                    <div>Hello, User</div>
+                    <!-- <img src="profile_picture.jpg" alt="Profile Picture"> -->
+                    <a href="profile.html">
+                        <img src="profile_picture.jpg" alt="Profile Picture">
+                    </a>
+                    
+                    <img src="settings.svg" alt="Settings">
+
+                    <div class="alert-icon">
+                        <img src="alert.svg" alt="Alert" onclick="toggleNotifications()" />
+                    </div>
+
+                    <!-- Notifications Panel -->
+                    <div id="notifications-panel" class="notifications-panel">
+                        <div class="notification-item">
+                            <span class="notification-title">Notification 1</span>
+                            <p>Details about notification 1...</p>
+                        </div>
+                        <div class="notification-item">
+                            <span class="notification-title">Notification 2</span>
+                            <p>Details about notification 2...</p>
+                        </div>
+                        <div class="notification-item">
+                            <span class="notification-title">Notification 3</span>
+                            <p>Details about notification 3...</p>
+                        </div>
+                        <!-- Add more notifications as needed -->
+                    </div>
+
+
+
+                    <!-- <img src="alert.svg" alt="Alert"> -->
+                </div>
+            </header>
+            <section class="metrics">
+                <div class="metric clickable">
+                    <div class="metric-header">
+                        <div class="metric-title">Total Vulnerabilities</div>
+                        <img src="vulnerabilities-icon.svg" alt="Vulnerabilities Icon" class="metric-icon">
+                    </div>
+                    <div class="metric-value">
+                        50.8K
+                        <div class="percentage">+3% <span class="date">than last week</span></div>
+                    </div>
+                </div>
+                <div class="metric clickable">
+                    <div class="metric-header">
+                        <div class="metric-title">Total Leaks</div>
+                        <img src="leaks-icon.svg" alt="Leaks Icon" class="metric-icon">
+                    </div>
+                    <div class="metric-value">
+                        23.6K
+                        <div class="percentage">+3% <span class="date">than last month</span></div>
+                    </div>
+                </div>
+                <div class="metric clickable">
+                    <div class="metric-header">
+                        <div class="metric-title">Live Complaints</div>
+                        <img src="complaints-icon.svg" alt="Complaints Icon" class="metric-icon">
+                    </div>
+                    <div class="metric-value">
+                        756
+                        <div class="percentage">+3% <span class="date">than last week</span></div>
+                    </div>
+                </div>
+                <div class="metric clickable">
+                    <div class="metric-header">
+                        <div class="metric-title">Past Complaints</div>
+                        <img src="past-complaints-icon.svg" alt="Past Complaints Icon" class="metric-icon">
+                    </div>
+                    <div class="metric-value">
+                        0
+                        <div class="percentage">+3% <span class="date">recently updated</span></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="charts">
+                <div class="chart">
+                    <h1>Active Threats</h1>
+                    <canvas id="vulnerabilityChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h2>Monthly Leaks</h2>
+                    <canvas id="leaksChart"></canvas>
+                </div>
+            </section>       
+        </main>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
